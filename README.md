@@ -6,3 +6,17 @@ A simple web app to create and edit a catalog of books. Using JavaScript for DOM
 
 Note that this is for practice and demonstartion purpose only. 
 The session storage data is stored temporarily and will be lost on exit.
+
+The requirements for this task were:
+
+  ● Create a webpage that can be used to let a user store information about a catalogue of books.
+  
+  ● Make use of session storage to store the values.
+  
+      o The user should be able to add information (e.g. author, title, genre,
+        reviews, etc.) about their favourite books.
+        
+      o All the information about all the books added by the user should be
+        listed on the webpage.
+        
+      o The user should also be able to remove or edit information for a book.
