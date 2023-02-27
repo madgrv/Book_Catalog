@@ -1,152 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Budgeting Website</title>
-	<script type="text/javascript" src="task2.js"></script>
+    <title>First HTML page with external Script</title>
     <style>
-        * {
-            color: rgb(255, 223, 214);
-            font-size: large;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+      /* creating some basic style */
+      .close {
+        color: #aa0000;
+        cursor: pointer;
+      }
 
-        body {
-            background-color: rgb(33, 23, 97);
-        }
+      .close:hover {
+        color: #ff0000;
+        font-weight: 600;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.424);
+      }
 
-        h1 {
-            font-size: xx-large;
-        }
+      .close:active {
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.424);
+      }
+
+      .update {
+        color: #3e8e41;
+        cursor: pointer;
+        display: none;
+      }
+
+      .update:hover {
+        color: #3cdb42;
+        font-weight: 600;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.424);
+      }
+
+      .update:active {
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.424);
+      }
         
-        h2 {
-            font-size: x-large;
-        }
-        
-        label {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        input {
-            background-color: rgb(33, 23, 97);
-            border: solid rgb(255, 223, 214);
-            border-radius: 8px;
-        }
-
-        button {
-            background-color: rgb(33, 23, 97);
-            border: solid 2px rgb(255, 255, 255);
-            border-radius: 12px;
-            color: rgb(255, 223, 214);
-            font-weight: 600;
-            transition: 0.1s;
-        }
-
-        button:hover {
-            box-shadow: 0px 1px 22px rgb(149, 0, 255);
-            color: rgb(255, 255, 255);
-
-        }
-        
-        button:active {
-            box-shadow: 0px 0px 17px rgb(149, 0, 255);
-            color: rgba(255, 255, 255, 0.294);
-
-
-        }
-
-        .boxLayout {
-            display: inline-flex;
-            margin: auto;
-        }
-
-        .boxContainer {
-            background-color: rgba(230, 209, 255, 0.079);
-            min-width: 33vw;
-            margin: 1vw;
-            padding: 1vw;
-            border-radius: 18px;
-        }
-
-        .close {
-            color: #d65d00;
-            /* font-size:larger; */
-            cursor: pointer;
-            display: none;
-
-        }
-
-        .close:hover {
-            color: #ff0000;
-            font-weight: 600;
-            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.424);
-            /* display: inline; */
-        }
-
-        .close:active {
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.424);
-            /* display: inline; */
-        }
-
     </style>
 </head>
-<body onload="loadPage()">
-    
-	<h1>Budgeting Page</h1>
-    <input type="text" id="type" placeholder="Enter income type"/>
-    <input type="text" id="amount" placeholder="Enter amount"/>
-    <label>
-        <input id="recIncome" type="checkbox" name="recurring" value="true">
-        Recurring
-    </label>
-    <button onclick=addEntry("Income")>Add Income</button>
-    <button onclick=addEntry("Expense")>Add Expense</button>
-    <!-- the entry will pass iehter Income and Expense as an argument 
-        to the script depending on which button is clicked -->
-	<div class="boxLayout">
-        <div class="boxContainer">
-            <h2>Income</h2>
-            <ul id="Income">
-                <!-- Income items will be added here by the JavaScript code -->
-            </ul>
-        </div>
-       <div class="boxContainer">
-           <h2>Expenses</h2>
-           <ul id="Expense">
-               <!-- Expense items will be added here by the JavaScript code -->
-           </ul>
-       </div> 
-    </div>
-    <div>
-        <h2>Disposable Income</h2>
-        <p id="disposableIncome"></p>
-        <div>
-            <div class="boxContainer">
-                <h2>Savings</h2>
-                <label for="savingsAmount">Enter amount to save:</label>
-                <input type="text" id="savingsAmount" placeholder="Enter the monthly amount">
-                <button onclick="calculateSavings()">Calculate Savings</button>
-                <h3>Total Savings:</h3>
-                <p id="totSavings"></p>
-            </div>
-            <div class="boxContainer">
-                <br>
-                <h3>Remaining Income:</h3>
-                <p id="remainingIncome"></p>
-            </div>
-        </div>
-    </div>
+
+<body>
+  <h1>Add a book to the list:</h1>
+  <input type="text" id="title" placeholder="Title"/>
+  <input type="text" id="author" placeholder="Author"/>
+  <input type="text" id="genre" placeholder="Genre"/>
+  <input type="text" id="theme" placeholder="Theme"/>
+  <button type="button" id="addButton" onclick="addBook()">Add Book</button>
+
+  <p>Book List:</p>
+  <ol id="bookList"></ol> 
+  <!--Creating a list ID to use in the script (I've used the ordered list in this case as it was in the original HTML file provided)-->
+  <script type="text/javascript" src="task1.js"></script>
+  <!--Link to my js script-->
+
 </body>
+
+
 </html>
 
-
 <!--
+    SOURCES:
+https://www.w3schools.com/jsref/dom_obj_li.asp
+  [accessed 17/Feb/2023]
 
-Resources:
-https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
-    [accessed 21/02/2023]
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
-    [Accessed 23/02/2023]
-
+https://bobbyhadz.com/blog/javascript-get-nth-child-of-element
+  [accessed 17/Feb/2023]
+  
+https://www.w3schools.com/html/html_form_elements.asp
+  [accessed 18/Feb/2023]
 
 -->
