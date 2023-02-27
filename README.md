@@ -4,8 +4,8 @@ A simple web app to create and edit a catalog of books. Using JavaScript for DOM
 ## Download folder and run bookCatalog.html in browser.
 ### Insert your favouite books details to create the catalog.
 
-Note that this is for practice and demonstartion purpose only. 
-The session storage data is stored temporarily and will be lost on exit.
+_Note that this is for practice and demonstartion purpose only. 
+The session storage data is stored temporarily and will be lost on exit._
 
 The requirements for this task were:
 
